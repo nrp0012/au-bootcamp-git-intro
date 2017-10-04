@@ -95,9 +95,9 @@
 
 for file in "$@"
 do
- 	
+ 	filename=$(echo $file | sed "s/\/\(.*\)$/\1/g")
 	snake=$(grep '^[ACGT]' $file | wc -l)
-	echo "$file $snake"
+	echo "$snake $filename"
 
 done
 
