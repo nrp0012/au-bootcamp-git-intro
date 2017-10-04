@@ -1,4 +1,3 @@
-#!/bin/sh
 
 #Noel: looking for sequences!
 x="example-seqs1"
@@ -6,9 +5,18 @@ y="example-seqs2"
 for var in $x $y
 
 do
+<<<<<<< HEAD
 	Count1=`grep ">" ${var}.fasta`
 	echo $Count1 | wc -l
 
+=======
+	#Count1=`grep -v '>' ${var}.fasta`
+	#Count2=`$Count1 | wc -l`
+	#Count1=$(grep '^[ATCG]' $var.fatsa | wc -l)
+        Count2=$(basename /this/is/a/path/$var.fatsa)
+        #prints just the file name
+        echo $Count2
+>>>>>>> 8e6e3a67f285de200f71be41282f554a24a4f4e9
 done
 
 # How this script should behave:
@@ -106,5 +114,3 @@ echo "$@"
 # ADD YOUR CODE BELOW:
 
 
-seq1=example-seq1.fafsa
-seq2=example-seq2.fafsa
