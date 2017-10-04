@@ -6,10 +6,9 @@ for var in $x $y
 do
 	#Count1=`grep -v '>' ${var}.fasta`
 	#Count2=`$Count1 | wc -l`
-	#Count1=$(grep '^[ATCG]' $var.fatsa | wc -l)
-        Count2=$(basename /this/is/a/path/$var.fatsa)
-        #prints just the file name
-        echo $Count2
+	Count1=$(grep '>' $var.fasta | wc -l)
+        Count2=$(basename /this/is/a/path/$var.fasta)
+        echo $Count1 \ $Count2 
 done
 
 # How this script should behave:
