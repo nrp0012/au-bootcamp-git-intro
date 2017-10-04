@@ -5,8 +5,8 @@ y="example-seqs2"
 for var in $x $y
 
 do
-	Count1=`grep '[^ACTG]' ${var}.fasta`
-	Count2=`$Count1 | wc -m`
+	Count1=`grep -v '>' ${var}.fasta`
+	Count2=`$Count1 | wc -l`
 	echo $Count2
 done
 
