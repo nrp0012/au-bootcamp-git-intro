@@ -1,11 +1,10 @@
 
+#Noel: looking for sequences!
 x="example-seqs1"
 y="example-seqs2"
 for var in $x $y
 
 do
-	#Count1=`grep -v '>' ${var}.fasta`
-	#Count2=`$Count1 | wc -l`
 	Count1=$(grep '>' $var.fasta | wc -l)
         Count2=$(basename /this/is/a/path/$var.fasta)
         echo $Count1 \ $Count2 
