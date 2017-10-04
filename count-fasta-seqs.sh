@@ -1,13 +1,14 @@
 #!/bin/sh
 
+#Noel: looking for sequences!
 x="example-seqs1"
 y="example-seqs2"
 for var in $x $y
 
 do
-	Count1=`grep -v '>' ${var}.fasta`
-	Count2=`$Count1 | wc -l`
-	echo $Count2
+	Count1=`grep ">" ${var}.fasta`
+	echo $Count1 | wc -l
+
 done
 
 # How this script should behave:
