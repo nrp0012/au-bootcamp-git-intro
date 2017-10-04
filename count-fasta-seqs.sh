@@ -7,7 +7,9 @@ for var in $x $y
 do
 	Count1=`grep -v '>' ${var}.fasta`
 	Count2=`$Count1 | wc -l`
-	echo $Count2
+	#Count2=basename $var
+        #prints just the file name
+        echo $Count2
 done
 
 # How this script should behave:
