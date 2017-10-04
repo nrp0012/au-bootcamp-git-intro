@@ -92,12 +92,12 @@
 #
 # ADD YOUR CODE BELOW:
 
-
+count=0
 for file in "$@"
 do
- 	filename=$(echo $file | sed "s/\/\(.*\)$/\1/g")
-	snake=$(grep '^[ACGT]' $file | wc -l)
-	echo "$snake $filename"
-
+filename=$(basename $file)
+snake=$(grep '>' $file | wc -l)
+echo $snake $filename
+count=$(expr $count  + $snake)
 done
-
+echo "$count"
