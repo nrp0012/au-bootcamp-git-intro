@@ -104,3 +104,6 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+
+seq1=example-seq1.fafsa
+seq2=example-seq2.fafsa
