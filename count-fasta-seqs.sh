@@ -5,6 +5,4 @@ filename=$(basename $file)
 snake=$(grep '>' $file | wc -l)
 echo $snake $filename
 count=$(expr $count  + $snake)
-done
-echo "$count"
-
+echo $count
