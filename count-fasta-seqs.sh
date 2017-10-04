@@ -95,5 +95,12 @@ echo "$@"
 # ADD YOUR CODE BELOW:
 
 
-seq1=example-seq1.fafsa
-seq2=example-seq2.fafsa
+x=~/Desktop/Lab4/au-bootcamp-git-intro/example-seq1.fafsa
+y=~/Desktop/Lab4/au-bootcamp-git-intro/example-seq2.fafsa
+
+for var in $x $y
+  do
+    #Count1=`grep '^[ATCG]' $var`
+    Count2=`basename $var`
+    echo $Count2
+  done 
