@@ -1,5 +1,15 @@
 #!/bin/sh
 
+x="example-seqs1"
+y="example-seqs2"
+for var in $x $y
+
+do
+	Count1=`grep -v '>' ${var}.fasta`
+	Count2=`$Count1 | wc -l`
+	echo $Count2
+done
+
 # How this script should behave:
 #
 # INPUT:   Paths to one or more fasta sequence files
