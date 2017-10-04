@@ -1,13 +1,13 @@
-#!/bin/sh
 
 x="example-seqs1"
 y="example-seqs2"
 for var in $x $y
 
 do
-	Count1=`grep -v '>' ${var}.fasta`
-	Count2=`$Count1 | wc -l`
-	#Count2=basename $var
+	#Count1=`grep -v '>' ${var}.fasta`
+	#Count2=`$Count1 | wc -l`
+	#Count1=$(grep '^[ATCG]' $var.fatsa | wc -l)
+        Count2=$(basename /this/is/a/path/$var.fatsa)
         #prints just the file name
         echo $Count2
 done
@@ -107,12 +107,3 @@ echo "$@"
 # ADD YOUR CODE BELOW:
 
 
-x=~/Desktop/Lab4/au-bootcamp-git-intro/example-seq1.fafsa
-y=~/Desktop/Lab4/au-bootcamp-git-intro/example-seq2.fafsa
-
-for var in $x $y
-  do
-    #Count1=`grep '^[ATCG]' $var`
-    Count2=`basename $var`
-    echo $Count2
-  done 
